@@ -1,4 +1,4 @@
-package com.currencycloud.uk.page;
+package com.currencycloud.page;
 
 import java.util.HashMap;
 import java.util.Map;
