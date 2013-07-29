@@ -1,7 +1,7 @@
 package com.currencycloud.stepdefinitions;
 
-import com.currencycloud.uk.page.HtmlElement;
-import com.currencycloud.uk.page.Page;
+import com.currencycloud.page.HtmlElement;
+import com.currencycloud.page.Page;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
@@ -16,8 +16,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 import java.util.Map;
 
-import static com.currencycloud.uk.page.HtmlElement.getElementByName;
-import static com.currencycloud.uk.page.Page.getPageByName;
+import static com.currencycloud.page.HtmlElement.getElementByName;
+import static com.currencycloud.page.Page.getPageByName;
 import static org.junit.Assert.assertTrue;
 import static org.openqa.selenium.By.*;
 

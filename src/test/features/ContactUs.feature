@@ -3,12 +3,12 @@ Feature: Currency Cloud Contact Us Form
   As a prospect user
   I want to submit the contact us form
 
-  Background:
+Background:
     Given I go to The Currency Cloud website
     And I visit Contact Us page
 
 
-  Scenario: Contact us form validation
+Scenario: Contact us form validation
     When I click on Submit button
     Then I see the global error message 'There was a problem with your submission. Errors have been highlighted below.'
     And I see the following field error messages :
