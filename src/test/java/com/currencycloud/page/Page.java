@@ -12,7 +12,8 @@ import java.util.Map;
  */
 public enum Page {
     CURRENCY_CLOUD("The Currency Cloud", "http://www.thecurrencycloud.com/", "International Currency Exchange and Conversion | The Currency Cloud"),
-    CONTACT_US("Contact Us", "http://www.thecurrencycloud.com/contact-us/", "Contact The Currency Cloud | Office Address and Map Location");
+    CONTACT_US("Contact Us", "http://www.thecurrencycloud.com/contact-us/", "Contact The Currency Cloud | Office Address and Map Location"),
+    Thank_You("Thank You","http://www.thecurrencycloud.com/thank-you/","We’ll get back to you shortly") ;
 
     private static Map<String, Page> pageNameMap = new HashMap<String, Page>();
 

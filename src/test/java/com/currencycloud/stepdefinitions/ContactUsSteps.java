@@ -8,6 +8,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.runtime.PendingException;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,7 @@ import java.util.Map;
 
 import static com.currencycloud.page.HtmlElement.getElementByName;
 import static com.currencycloud.page.Page.getPageByName;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.openqa.selenium.By.*;
 
@@ -32,6 +34,10 @@ public class ContactUsSteps {
     public static final String ERROR_MESSAGE = "errorMessage";
     public static final String FIELD_NAME = "fieldName";
     public static final String TITLE = "title";
+    public static final String F_NAME = "fieldName";
+    public static final String FIELD_VALUE = "fieldValue";
+
+
     private static WebDriver webDriver;
 
     @Before
@@ -78,4 +84,26 @@ public class ContactUsSteps {
     public void tearDown() {
         webDriver.quit();
     }
+
+    @cucumber.api.java.en.Given("^I input following information in the form:$")
+    public void I_input_following_information_in_the_form(List<Map<String, String>> fieldList) {
+        String fieldName;
+        String fieldValue;
+        for (Map<String, String> valueMap : fieldList) {
+            fieldName = valueMap.get(F_NAME);
+            fieldValue = valueMap.get(FIELD_VALUE);
+            HtmlElement htmlElement = HtmlElement.getElementByName(fieldName);
+            WebElement webElement = webDriver.findElement(id(htmlElement.getId()));
+            webElement.sendKeys(fieldValue);
+        }
+    }
+
+    @Then("^I see the (.*) page$")
+    public void I_see_the_page(String pageName)  {
+        Page page = getPageByName(pageName);
+        assertEquals(webDriver.getCurrentUrl(),page.getPageUrl());
+
+    }
 }
+
+
