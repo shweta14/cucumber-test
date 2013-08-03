@@ -6,19 +6,19 @@
     <name>cc-module</name>
     <version>1</version>
     <pluginRepositories>
-            <pluginRepository>
-                <id>cukes</id>
-                <url>http://cukes.info/maven</url>
-            </pluginRepository>
-        </pluginRepositories>
+        <pluginRepository>
+            <id>cukes</id>
+            <url>http://cukes.info/maven</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
-                    <groupId>junit</groupId>
-                    <artifactId>junit</artifactId>
-                    <version>4.10</version>
-                    <scope>test</scope>
-                </dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -50,21 +50,21 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-             <groupId>info.cukes</groupId>
-             <artifactId>cucumber-jvm</artifactId>
-             <version>1.0.11</version>
-             <type>pom</type>
-         </dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>1.0.11</version>
+            <type>pom</type>
+        </dependency>
         <dependency>
-        	<groupId>org.seleniumhq.selenium</groupId>
-        	<artifactId>selenium-firefox-driver</artifactId>
-        	<version>2.33.0</version>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>2.33.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-               <groupId>org.seleniumhq.selenium</groupId>
-               <artifactId>selenium-support</artifactId>
-               <version>2.26.0</version>
-             </dependency>
-        </dependencies>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>2.26.0</version>
+        </dependency>
+    </dependencies>
 </project>

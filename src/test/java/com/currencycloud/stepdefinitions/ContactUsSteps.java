@@ -8,7 +8,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.runtime.PendingException;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -85,7 +84,7 @@ public class ContactUsSteps {
         webDriver.quit();
     }
 
-    @cucumber.api.java.en.Given("^I input following information in the form:$")
+    @Given("^I input following information in the form:$")
     public void I_input_following_information_in_the_form(List<Map<String, String>> fieldList) {
         String fieldName;
         String fieldValue;
@@ -99,9 +98,9 @@ public class ContactUsSteps {
     }
 
     @Then("^I see the (.*) page$")
-    public void I_see_the_page(String pageName)  {
+    public void I_see_the_page(String pageName) {
         Page page = getPageByName(pageName);
-        assertEquals(webDriver.getCurrentUrl(),page.getPageUrl());
+        assertEquals(webDriver.getCurrentUrl(), page.getPageUrl());
 
     }
 }
